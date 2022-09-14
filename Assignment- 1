@@ -1,0 +1,10 @@
+from geopy.geocoders import Nominatim
+
+geolocator = Nominatim(user_agent="MyApp")
+
+locationName = input("Enter the location: ")
+
+location = geolocator.geocode(locationName)
+
+print("Latitude: %.4f"%location.latitude)
+print("Longitude: %.4f"%location.longitude)
